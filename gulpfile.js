@@ -7,31 +7,9 @@ const clean = require('gulp-clean');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
-const purgecss = require('gulp-purgecss')
+const purgecss = require('gulp-purgecss');
 
 
-// gulp.task('serve',['build'], function() {
-
-//     browserSync.init({
-//         server: "./"
-//     });
-
-//     // gulp.watch("app/scss/*.scss", ['sass']);
-//     gulp.watch("./index.html").on('change', ['build' , 'browserSync.reload']);
-// });
-// gulp.task('browserSync', function() {
-//     browserSync.init({
-//         server: {
-//             baseDir: "./"
-//         }
-//     });
-//     gulp.watch("./*.html")
-//         .pipe(browserSync.reload({stream : true}))
-// });
-// gulp.task('watch',  
-//  gulp.watch('./src/js/*.js') ['gulp build']
-//     // gulp.watch('./src/scss/*.scss'),  build'; .on('change', browserSync.reload());
-// )
 
 gulp.task('cleanDist', () =>  {
     return gulp
@@ -82,9 +60,9 @@ gulp.task('concatAndMinifyJs', () => {
 
 gulp.task('copyCssAndJsToDist', () => {
     return gulp
-        .src('./src/css/min/styles.min.css')
+        .src('./src/css/min/styles.min.css', {allowEmpty: true})
         .pipe(gulp.dest('./dist/'))
-        .pipe(gulp.src('./src/js/min/scripts.min.js'))
+        .pipe(gulp.src('./src/js/min/scripts.min.js', {allowEmpty: true}))
         .pipe(gulp.dest('./dist/'))
 })
 
@@ -98,4 +76,13 @@ gulp.task('optmAndCopyImgToDist', () => {
 
 gulp.task('build', gulp.series('cleanDist', 'compileToCss', 'addPrefix', 'remoteUnusedCss', 'concatAndMinifyCss', 'concatAndMinifyJs', 'copyCssAndJsToDist', 'optmAndCopyImgToDist'));
 
-// gulp.task('dev', gulp.series('serve', 'build'));
+gulp.task("dev", () =>{
+    browserSync.init({
+        server: "./"
+    });
+    gulp.watch("./src/sass/**/*.scss", gulp.series('compileToCss','addPrefix','remoteUnusedCss','concatAndMinifyCss','copyCssAndJsToDist'));
+    gulp.watch("./src/js/*.js", gulp.series('concatAndMinifyJs', 'copyCssAndJsToDist'));
+    gulp.watch('./src/img/*', gulp.series('optmAndCopyImgToDist'));
+    gulp.watch("./index.html").on('change',  browserSync.reload);
+    gulp.watch('./dist/').on('change',  browserSync.reload);
+});
