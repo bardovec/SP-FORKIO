@@ -1,0 +1,12 @@
+.SubscriptionPricing {
+  min-width: 320px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background: url("dist/img/SubscriptionPricing/testmonials-bg 2.png") center;
+  background-size: cover; }
+
+.SubscriptionPricing__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 42px;
+  color: white; }

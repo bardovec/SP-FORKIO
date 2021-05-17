@@ -36,10 +36,10 @@ gulp.task('addPrefix', () => {
 
 gulp.task('remoteUnusedCss', () => {
     return gulp.src('src/css/*.css')
-    .pipe(purgecss({
-        content: ['index.html']
-    }))
-    .pipe(gulp.dest('src/css/'))
+        .pipe(purgecss({
+            content: ['index.html']
+        }))
+        .pipe(gulp.dest('src/css/'))
 })
 
 gulp.task('concatAndMinifyCss', () => {

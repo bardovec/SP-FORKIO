@@ -1,0 +1,47 @@
+.hereIsWhatYouGet {
+  min-width: 320px;
+  background-color: #E5E5E5;
+  text-align: center;;
+  font-family: 'Montserrat', sans-serif;
+}
+.hereIsWhatYouGet__info {
+  margin-bottom: 64px ;
+}
+
+.hereIsWhatYouGet__title {
+
+  font-size: 32px;
+  line-height: 38px;
+  color: #8D81AC;
+  font-weight: 700;
+  padding-bottom: 36px;
+}
+
+.hereIsWhatYouGet__description___title {
+  color: #323232;
+  padding-bottom: 14px;
+
+}
+.hereIsWhatYouGet__subtitle {
+  line-height: 21px;
+  font-family: 'Lato', sans-serif;
+  color: #848E97;
+  font-size: 14px ;
+  padding-bottom: 40px;
+}
+.hereIsWhatYouGet__img {
+ padding-bottom: 20px;
+
+
+}
+.padding-reset {
+  padding-right: 0;
+}
+.hereIsWhatYouGet__photo-of-editor___title {
+  display: none ;
+}
+.hereIsWhatYouGet__photo-of-editor___img {
+  background: url("/dist/img/hereIsWhatYouGet__img/photo_of_editor.png") no-repeat;
+  height: 381px;
+  padding-bottom: 6px;
+}
