@@ -1,6 +1,7 @@
 html, body, div, span,
 h1, h2, h3, p,
-a, img, ul, li, header, section {
+a, img, ul, li, header,
+menu, section {
   margin: 0;
   padding: 0;
   border: 0;
@@ -9,7 +10,7 @@ a, img, ul, li, header, section {
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
- header, section {
+ header, menu, section {
   display: block; }
 
 body {

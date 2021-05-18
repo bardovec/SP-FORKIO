@@ -1,0 +1,262 @@
+.header { 
+    background: url('./img/header/header.png');
+//     background-size: cover;
+    // min-width: 320px;
+
+  
+
+    @media (min-width: 993px) {
+        background: url('./img/header/desktopbd.png');
+    }
+ }
+.wrapper__navbar{
+    background: #27262A;
+    @media (min-width: 993px) {
+        background: none;
+    }
+}
+.header__navbar {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 32px 5px;
+//     @media (min-width: 481px) {
+//         padding: 22px 20px;
+//     }
+}
+// .navbar__logo{
+//     // display: flex;
+//     // align-items: center;
+// }
+.navbar__logo-link{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+    
+.logo__text{
+    display:none;    
+
+    @media (min-width: 481px) {
+        display: block;
+
+        font-family: Lato;
+
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 16px;
+        text-transform: uppercase;
+
+        color: #8D81AC;
+
+        margin-left: 12px;
+    }
+}
+.navbar__btn__desktopmenu{
+    display: flex;
+}
+
+.menu-desktop__link{
+    text-decoration: none;
+    
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 17px;
+
+    color: #8D81AC;
+
+    padding: 0 24px;
+}
+
+
+
+
+
+.navbar__btn{
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 15px;
+    
+    
+    background: #8D81AC;
+    border-radius: 40px;
+    
+    color: #FFFFFF;
+    
+    border: 0;
+
+    padding: 12px 20px;
+
+    cursor: pointer;
+}
+.header__burgermenu-imgs{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @media (min-width: 481px) {
+        display: none;
+    } 
+
+}
+.burgermenu-img{
+    padding: 3px 0;
+}
+.navbar__menu-desktop{
+    display: none;
+    @media (min-width: 993px) {
+        display: flex;
+        list-style: none;
+
+        
+    }
+}
+.header__menu-tablet {
+    display: none;
+
+    
+    @media (min-width: 481px) {
+        display: flex;
+        justify-content: space-around;
+        
+        list-style: none;
+
+        padding: 0 0 18px;
+        margin: 0;
+        
+    }
+    @media (min-width: 993px) {
+        display: none;
+        
+    }
+}
+
+
+.menu__link-tablet{
+    font-family: Montserrat;
+
+    font-weight: bold;
+    font-size: 16px;
+  
+    
+    color: #8D81AC;
+
+    
+    text-decoration: none;
+
+}
+.header__textblok{
+    text-align: center;
+    padding: 50px 7px 416px;
+}
+//     .desktop{
+//         display: flex;
+//     }
+//     .navbar__desktop__menu{
+//         display: none;
+//         text-decoration: none;
+//         list-style: none;
+//         justify-content: space-between;
+//     @media (min-width: 993px) {
+//         display: flex;
+//         justify-content: space-around;
+//     }}
+    
+// .navbar-item{
+//     font-family: Montserrat;
+
+// font-weight: bold;
+// font-size: 16px;
+// line-height: 18px;
+
+// color: #8D81AC;
+//     @media (min-width: 481px) {
+        
+// }
+//     } 
+.header__textblok-title{
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 48px;
+
+    color: #FFFFFF;
+}
+.header__textblok-subtitle{
+    font-family: Montserrat;
+    font-size: 18px;
+    line-height: 24px;
+
+    color: #8D81AC;
+
+    margin-top: 19px;
+}
+.header__textblok-text{
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 14px;
+
+    color: #848E97;
+
+    margin-top: 14px;
+
+}
+.header__downloadbtn-blok{
+    width: 100%;
+
+    text-align: center;
+
+    position: absolute;
+    left:0;
+    top: 692px;
+    @media (min-width: 481px) {
+        top: 700px;
+        
+    }
+    @media (min-width: 993px) {
+        top: 675px;
+        
+    }
+   
+}
+// .headet-text-blok{
+//     padding: 50px 10px 416px;
+//     position: relative;
+//     padding-top: 50px;
+//     padding-bottom: 416px;
+// }
+
+// .headerafter{
+//     position: absolute;
+//     top: 580px;
+//     margin: 0;
+//     width: 100%;
+//     text-align: center;
+// }
+.header__downloadbtn{
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 18px;
+
+    border: 0;
+    border-radius: 40px;
+    background: #8D81AC;
+    
+    color: #FFFFFF;
+
+    padding: 12px 30px;
+
+    cursor: pointer;
+}
+.header__downloadbtn-text{
+    font-family: Montserrat;
+    font-size: 14px;
+
+    color: #848E97;
+
+    margin-top: 12px;
+}
+
