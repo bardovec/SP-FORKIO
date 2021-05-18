@@ -28,7 +28,7 @@ gulp.task('addPrefix', () => {
     return gulp
         .src('./src/css/*.css')
         .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
+            overrideBrowserslist: ['last 2 versions'],
             cascade: false
         }))
         .pipe(gulp.dest('./src/css/'))
@@ -76,13 +76,13 @@ gulp.task('optmAndCopyImgToDist', () => {
 
 gulp.task('build', gulp.series('cleanDist', 'compileToCss', 'addPrefix', 'remoteUnusedCss', 'concatAndMinifyCss', 'concatAndMinifyJs', 'copyCssAndJsToDist', 'optmAndCopyImgToDist'));
 
-gulp.task("dev", () =>{
+gulp.task('dev', () =>{
     browserSync.init({
-        server: "./"
+        server: './'
     });
-    gulp.watch("./src/sass/**/*.scss", gulp.series('compileToCss','addPrefix','remoteUnusedCss','concatAndMinifyCss','copyCssAndJsToDist'));
-    gulp.watch("./src/js/*.js", gulp.series('concatAndMinifyJs', 'copyCssAndJsToDist'));
-    gulp.watch('./src/img/*', gulp.series('optmAndCopyImgToDist'));
-    gulp.watch("./index.html").on('change',  browserSync.reload);
+    gulp.watch('./src/sass/**/*.scss', gulp.series('compileToCss','addPrefix','remoteUnusedCss','concatAndMinifyCss','copyCssAndJsToDist'));
+    gulp.watch('./src/js/*.js', gulp.series('concatAndMinifyJs', 'copyCssAndJsToDist'));
+    gulp.watch('./src/img/**', gulp.series('optmAndCopyImgToDist'));
+    gulp.watch('./index.html').on('change',  browserSync.reload);
     gulp.watch('./dist/').on('change',  browserSync.reload);
 });
