@@ -1,7 +1,8 @@
 .revolutionaryEditor {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-  min-width: 320px; }
+  min-width: 320px;
+  margin-top: 93px; }
 
 .revEd__title {
   font-size: 26px;
@@ -21,15 +22,25 @@
   padding: 0 25px; }
 
 .revED__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   list-style: none;
   padding-bottom: 120px; }
 
 .revEd__btn-list {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
   align-items: flex-end;
   background-color: #F3F4F6;
   border-radius: 6px;
