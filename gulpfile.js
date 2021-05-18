@@ -28,7 +28,7 @@ gulp.task('addPrefix', () => {
     return gulp
         .src('./src/css/*.css')
         .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
+            ovverrideBrowserList: ['last 2 versions'],
             cascade: false
         }))
         .pipe(gulp.dest('./src/css/'))
