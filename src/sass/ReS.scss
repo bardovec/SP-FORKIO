@@ -1,6 +1,5 @@
 .revolutionaryEditor {
   text-align: center;
-  background-color: #E5E5E5;
   font-family:'Montserrat', sans-serif;
   min-width: 320px;
 
@@ -11,8 +10,10 @@
   line-height: 28px;
   color: #635C73;
   text-transform: uppercase;
-  padding-bottom:  27px;
+  margin-bottom:  27px;
   font-weight: 700  ;
+  padding: 0 25px;
+
 }
 
 .revEd__subtitle {
@@ -21,32 +22,36 @@
   line-height: 20px;
   color: #323232;
   margin-bottom: 26px;
-
-  padding: 0 18px;
+  padding: 0 25px;
 }
 
 .revED__buttons {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   list-style: none;
+  padding-bottom: 120px;
+
+
 }
 
 .revEd__btn-list {
   box-sizing: border-box;
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   background-color: #F3F4F6;
   border-radius: 6px;
   border: 1px solid;
   border-color: #D5D5D5;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .revEd__btn-link {
 
 
   font-weight: bold;
-  padding: 6px 5px;
+  padding: 6px 7px;
   text-decoration: none;
   font-size: 12px;
   line-height: 20px;
@@ -65,9 +70,30 @@
 
 }
 
-@media all and (min-width: 7481px) {
+@media all and (min-width: 481px) and (max-width: 992px) {
   .revEd__title{
     font-size: 42px;
     line-height: 42px;
   }
+  .revEd__subtitle {
+    font-size: 21px;
+    line-height: 32px;
+
+  }
+
+  }
+@media all and (min-width: 993px) {
+  .revEd__title{
+    font-size: 54px;
+    line-height: 54px;
+
+  }
+  .revEd__subtitle {
+    font-size: 21px;
+    line-height: 32px;
+    padding: 0 235px;
+
+  }
+
 }
+
